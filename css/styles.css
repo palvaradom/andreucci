@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blanc: #ffffff;
+    --noir: #1d1d1b;
+    --marron: #d6b896;
+    --beige: #f2e8dc;
+    --marron-font: #5C5246;
+    --pad: 180px;
+    --padm: 90px;
+    --pads: 3rem;
+    --ease: cubic-bezier(.215, 0, .355, 1);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: 'Ostia-Antica-light';
+    src: url('../fonts/Ostia-Antica-light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Ostia-Antica-regular';
+    src: url('../fonts/Ostia-Antica-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Custom';
+    src: url('../fonts/S6uyw4BMUTPHjx4wXg.woff2') format('woff');
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    /*overflow-y: scroll;*/
+    font-family: 'light', sans-serif;
+    line-height: 1.4;
+    background-color: var(--marron);
+    /*display: flex;
+    flex-direction: column;*/
+}
+
+header {
+    height: 17%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: transparent;
+    z-index: 1;
+}
+
+header .nav-element {
+    flex: 1;
+}
+
+header .andreucci-icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .andreucci-icon img {
+    height: 80%;
+}
+
+header .andreucci-logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+header .andreucci-logo img {
+    height: 30%;
+}
+
+nav {
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+nav ul .menu {
+    height: 65px;
+    width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul .menu button {
+    color: var(--blanc);
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: var(--noir);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+nav ul .menu button span {
+    display: inline-block;
+    transform: scaleY(0.9);
+    font-stretch: expanded;
+    font-size: 1.6rem;
+}
+
+
+
+nav ul .reservation {
+    position: absolute;
+    top: 50vh;
+    transform: rotate(90deg);
+    height: 65px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul .reservation button {
+    color: var(--blanc);
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: var(--noir);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+nav ul .reservation button span {
+    font-size: 1.6rem;
+}
+
+main {
+    /*height: 83%;*/
+    overflow-y: scroll;
+    position: relative;
+    top: 17%;
+    width: 100%;
+}
+
+main .module {
+    height: 100vh;
+}
+
+main .modulo-1 {
+    /*height: 67.75%;*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+main .modulo-1 .title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main .modulo-1 .title-container h1 {
+    font-size: 11.5rem;
+    text-align: center;
+    width: 70%;
+    font-family: 'Ostia-Antica-light';
+    color: var(--blanc);
+    font-weight: lighter;
+    line-height: 11rem;
+}
+
+main .modulo-1 .descripcion-empresa {
+    display: flex;
+    width: 100%;
+}
+
+main .modulo-1 .descripcion-empresa .item {
+    flex: 1;
+    /*width: 33%;*/
+}
+
+main .modulo-1 .descripcion-empresa .parrafo-container-1 {
+    
+    /*bottom: calc(38vh + var(--padm));
+    width: 20%;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /*bottom: 12vh;*/
+    font-family: 'Custom';
+}
+
+main .modulo-1 .descripcion-empresa .parrafo-container-1 p {
+    width: 70%;
+    line-height: 2.7rem;
+    /*transform: scaleY(0.88);*/
+    color: var(--marron-font);
+    letter-spacing: 0.2rem;
+    font-size: 1.9rem;
+    text-indent: 5rem;
+}
+
+main .modulo-1 .descripcion-empresa .imagen-centro-container figure {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+
+main .modulo-1 .descripcion-empresa .imagen-centro-container figure img:first-child {
+    width: 90%;
+}
+
+main .modulo-1 .descripcion-empresa .imagen-centro-container figure img:nth-child(2) {
+    width: 90%;
+    position: absolute;
+}
+
+main .modulo-1 .descripcion-empresa .parrafo-container-2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Custom';
+    align-items: flex-end;
+}
+
+main .modulo-1 .descripcion-empresa .parrafo-container-2 p {
+    width: 70%;
+    line-height: 2.7rem;
+    /*transform: scaleY(0.88);*/
+    color: var(--marron-font);
+    letter-spacing: 0.2rem;
+    font-size: 1.9rem;
+    text-indent: 5rem;
+}
+
+main .modulo-2 {
+    background-color: var(--blanc);
+}
+
+main .modulo-2 .parrafo-container-3 {
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .modulo-2 .parrafo-container-3 p {
+    font-family: 'Ostia-Antica-light';
+    font-size: 4rem;
+    width: 60%;
+    text-align: center;
+    line-height: 5rem;
+    margin-top: 7%;
+}
+
+main .modulo-2 .button-container-carte {
+    height: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+main .modulo-2 .button-container-carte button {
+    height: 30%;
+    width: 18%;
+    border: none;
+    background-color: var(--noir);
+    border-radius: 50px;
+    color: var(--blanc);
+    font-size: 2.5rem;
+    cursor: pointer;
+    font-family: 'Ostia-Antica-light';
+}
+
+main .modulo-3 {
+    background-color: var(--blanc);
+}
+
+main .modulo-3 figure {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .modulo-3 figure img {
+    height: 70%;
+    border-radius: 200px;
+    margin-top: 5%;
+}
+
+.carousel {
+    height: 30%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 50%;
+  }
+
+  @keyframes carousel-animation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .slide {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    animation: 'carousel-animation' 30s infinite;
+  }
+
+  .carousel .slide img {
+    height: 100%;
+  }
+  
+
+  
