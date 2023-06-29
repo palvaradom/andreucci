@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       PREVIEW_REPO: palvaradom/preview-template
-      PAGES_BASE: https://octocat.github.io/preview
+      PAGES_BASE: https://github.com/palvaradom/previews
 
     steps:
       - name: Checkout branch
